@@ -1,7 +1,14 @@
-import Fontisto from '@expo/vector-icons/Fontisto';
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
-import SimpleLineIcons from '@expo/vector-icons/SimpleLineIcons';
-import { Pressable, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import Fontisto from "@expo/vector-icons/Fontisto";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
+import {
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 export default function Index() {
   return (
@@ -12,85 +19,217 @@ export default function Index() {
           <Text style={[styles.greeting, { fontWeight: "bold" }]}>Evgeny</Text>
         </View>
         <View style={styles.circleIcon}>
-          <MaterialCommunityIcons name="email-outline" size={24} color="#008a00" />
+          <MaterialCommunityIcons
+            name="email-outline"
+            size={24}
+            color="#008a00"
+          />
         </View>
       </View>
 
       <ScrollView horizontal={true} style={{ marginTop: -20, flexGrow: 0 }}>
-
         <TouchableOpacity>
-          <Pressable style={[styles.OvalButton, { marginLeft: 20 }]}>
-            <MaterialCommunityIcons name="send-outline" size={24} color="#008a00" />
-            <Text style={{ fontWeight: "bold", marginLeft: 5 }}>Interac e-Transfer</Text>
+          <Pressable style={[styles.ovalButton, { marginLeft: 20 }]}>
+            <MaterialCommunityIcons
+              name="send-outline"
+              size={24}
+              color="#008a00"
+            />
+            <Text style={{ fontWeight: "bold", marginLeft: 5 }}>
+              Interac e-Transfer
+            </Text>
           </Pressable>
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Pressable style={styles.OvalButton}>
+          <Pressable style={styles.ovalButton}>
             <Fontisto name="arrow-swap" size={24} color="#008a00" />
             <Text style={{ fontWeight: "bold", marginLeft: 5 }}>Transfer</Text>
           </Pressable>
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Pressable style={styles.OvalButton}>
-            <MaterialCommunityIcons name="file-document-outline" size={24} color="#008a00" />
+          <Pressable style={styles.ovalButton}>
+            <MaterialCommunityIcons
+              name="file-document-outline"
+              size={24}
+              color="#008a00"
+            />
             <Text style={{ fontWeight: "bold", marginLeft: 5 }}>Pay Bills</Text>
           </Pressable>
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Pressable style={styles.OvalButton}>
-            <MaterialCommunityIcons name="camera-outline" size={24} color="#008a00" />
-            <Text style={{ fontWeight: "bold", marginLeft: 5 }}>Deposit Cheque</Text>
+          <Pressable style={styles.ovalButton}>
+            <MaterialCommunityIcons
+              name="camera-outline"
+              size={24}
+              color="#008a00"
+            />
+            <Text style={{ fontWeight: "bold", marginLeft: 5 }}>
+              Deposit Cheque
+            </Text>
           </Pressable>
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Pressable style={styles.OvalButton}>
+          <Pressable style={styles.ovalButton}>
             <SimpleLineIcons name="globe" size={24} color="#008a00" />
-            <Text style={{ fontWeight: "bold", marginLeft: 5 }}>TD Global Transfer</Text>
+            <Text style={{ fontWeight: "bold", marginLeft: 5 }}>
+              TD Global Transfer
+            </Text>
           </Pressable>
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Pressable style={[styles.OvalButton, { marginRight: 20 }]}>
-            <MaterialCommunityIcons name="currency-usd" size={24} color="#008a00" />
-            <Text style={{ fontWeight: "bold", marginLeft: 5 }}>Request Money</Text>
+          <Pressable style={[styles.ovalButton, { marginRight: 20 }]}>
+            <MaterialCommunityIcons
+              name="currency-usd"
+              size={24}
+              color="#008a00"
+            />
+            <Text style={{ fontWeight: "bold", marginLeft: 5 }}>
+              Request Money
+            </Text>
           </Pressable>
         </TouchableOpacity>
-
       </ScrollView>
 
       <View style={styles.myAccountContainer}>
-
         <View style={styles.myAccounts}>
           <Text style={{ fontWeight: "bold", fontSize: 24 }}>My Accounts</Text>
-          <MaterialCommunityIcons name="chevron-right" size={40} color="#008a00" />
-          <MaterialCommunityIcons style={{ marginLeft: "auto" }} name="dots-horizontal" size={24} color="black" />
+          <MaterialCommunityIcons
+            name="chevron-right"
+            size={40}
+            color="#008a00"
+          />
+          <MaterialCommunityIcons
+            style={{ marginLeft: "auto" }}
+            name="dots-horizontal"
+            size={24}
+            color="black"
+          />
         </View>
 
-        <View style={styles.BankTab}>
+        <View style={styles.bankTab}>
           <TouchableOpacity>
-            <Pressable style={styles.BankTabTextContainer}>
+            <Pressable style={styles.bankTabTextContainer}>
               <View>
-                <Text style={styles.BankTabText}>Banking</Text>
+                <Text style={styles.bankTabText}>Banking</Text>
                 <Text style={{ color: "#7a7a7a" }}>5 accounts</Text>
               </View>
-              <View style={{ marginLeft: "auto", marginRight: 10, flexDirection: "row", alignItems: "center" }}>
-                <Text style={{ fontWeight: "bold", marginRight: 5, fontSize: 18 }}>$25654.00</Text>
-                <MaterialCommunityIcons name="chevron-down" size={30} color="#797979" />
+              <View
+                style={{
+                  marginLeft: "auto",
+                  marginRight: 10,
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
+                <Text
+                  style={{ fontWeight: "bold", marginRight: 5, fontSize: 18 }}
+                >
+                  $25654.00
+                </Text>
+                <MaterialCommunityIcons
+                  name="chevron-down"
+                  size={30}
+                  color="#797979"
+                />
+              </View>
+            </Pressable>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.creditCardTab}>
+          <TouchableOpacity>
+            <Pressable style={styles.creditCardTabTextContainer}>
+              <View>
+                <Text style={styles.creditCardTabText}>Credit card</Text>
+              </View>
+            </Pressable>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Pressable
+              style={[
+                styles.innerCreditCardTabTextContainer,
+                { borderTopWidth: 1, borderTopColor: "#ccc" },
+              ]}
+            >
+              <View>
+                <Text
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: 20,
+                    color: "#008a00",
+                  }}
+                >
+                  TD AEROPLAN VISA{"\n"}INFINITE
+                </Text>
+                <Text>452034*****4350</Text>
+              </View>
+              <View
+                style={{
+                  marginLeft: "auto",
+                  marginRight: 10,
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
+                <Text style={{ fontWeight: "bold", fontSize: 18 }}>
+                  $1234.56
+                </Text>
               </View>
             </Pressable>
           </TouchableOpacity>
         </View>
 
+        <View style={styles.personalInvestmentTab}>
+          <TouchableOpacity>
+            <Pressable style={styles.personalInvestmentTabTextContainer}>
+              <View>
+                <Text style={styles.personalInvestmentTabText}>
+                  Personal Investing
+                </Text>
+                <Text>2 accounts</Text>
+              </View>
+              <View
+                style={{
+                  marginLeft: "auto",
+                  marginRight: 10,
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
+                <Text style={{ fontWeight: "bold", fontSize: 18 }}>$0.00</Text>
+              </View>
+            </Pressable>
+          </TouchableOpacity>
+        </View>
+
+        <View>
+          <TouchableOpacity>
+            <Pressable>
+              <View>
+                <MaterialCommunityIcons
+                  name="plus-circle-outline"
+                  size={24}
+                  color="#008a00"
+                />
+              </View>
+              <View>
+                <Text>Add Accounts and Services</Text>
+              </View>
+            </Pressable>
+          </TouchableOpacity>
+        </View>
       </View>
 
-      <View style={styles.NavBar}>
-        <Text style={{ color: "white", fontWeight: "bold" }}>Navigation Bar</Text>
+      <View style={styles.navBar}>
+        <Text style={{ color: "white", fontWeight: "bold" }}>
+          Navigation Bar
+        </Text>
       </View>
-    </View >
+    </View>
   );
 }
 
@@ -128,7 +267,7 @@ const styles = StyleSheet.create({
     marginTop: 25,
   },
 
-  OvalButton: {
+  ovalButton: {
     width: "auto",
     height: 45,
     borderRadius: 22,
@@ -139,7 +278,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     marginLeft: 8,
     flexDirection: "row",
-
   },
 
   greeting: {
@@ -163,16 +301,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
-  NavBar: {
-    width: "100%",
-    height: 100,
-    backgroundColor: "#008a00",
-    justifyContent: "center",
-    alignItems: "center",
-
-  },
-
-  BankTab: {
+  bankTab: {
     width: "90%",
     height: "auto",
     borderRadius: 15,
@@ -183,7 +312,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
 
-  BankTabTextContainer: {
+  bankTabTextContainer: {
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
@@ -191,10 +320,96 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
   },
 
-  BankTabText: {
+  bankTabText: {
     fontWeight: "bold",
-    fontSize: 24,
+    fontSize: 19,
   },
 
+  creditCardTab: {
+    width: "90%",
+    height: "auto",
+    borderRadius: 15,
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    marginBottom: 10,
+  },
 
+  creditCardTabTextContainer: {
+    width: "90%",
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexDirection: "column",
+    paddingVertical: 20,
+    marginLeft: 15,
+  },
+  innerCreditCardTabTextContainer: {
+    width: "100%",
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexDirection: "row",
+    paddingVertical: 10,
+    paddingLeft: 15,
+  },
+
+  creditCardTabText: {
+    fontWeight: "bold",
+    fontSize: 19,
+  },
+
+  personalInvestmentTab: {
+    width: "90%",
+    height: "auto",
+    borderRadius: 15,
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    marginBottom: 10,
+  },
+
+  personalInvestmentTabTextContainer: {
+    width: "90%",
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexDirection: "row",
+    paddingVertical: 20,
+    marginLeft: 15,
+  },
+
+  personalInvestmentTabText: {
+    fontWeight: "bold",
+    fontSize: 19,
+  },
+
+  // accountAndServicesTab: {
+  //   width: "90%",
+  //   height: "auto",
+  //   borderRadius: 15,
+  //   backgroundColor: "white",
+  //   justifyContent: "center",
+  //   alignItems: "flex-start",
+  //   marginBottom: 10,
+  // },
+
+  // accountAndServicesTabTextContainer: {
+  //   width: "90%",
+  //   justifyContent: "space-between",
+  //   alignItems: "center",
+  //   flexDirection: "row",
+  //   paddingVertical: 20,
+  //   marginLeft: 15,
+  // },
+
+  // accountAndServicesTabText: {
+  //   fontWeight: "bold",
+  //   fontSize: 16,
+  // },
+
+  navBar: {
+    width: "100%",
+    height: 100,
+    backgroundColor: "#008a00",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });
