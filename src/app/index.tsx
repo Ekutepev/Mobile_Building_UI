@@ -15,52 +15,78 @@ export default function Index() {
           <MaterialCommunityIcons name="email-outline" size={24} color="#008a00" />
         </View>
       </View>
+
       <ScrollView horizontal={true} style={{ marginTop: -20, flexGrow: 0 }}>
+
         <TouchableOpacity>
           <Pressable style={[styles.OvalButton, { marginLeft: 20 }]}>
             <MaterialCommunityIcons name="send-outline" size={24} color="#008a00" />
             <Text style={{ fontWeight: "bold", marginLeft: 5 }}>Interac e-Transfer</Text>
           </Pressable>
         </TouchableOpacity>
+
         <TouchableOpacity>
           <Pressable style={styles.OvalButton}>
             <Fontisto name="arrow-swap" size={24} color="#008a00" />
             <Text style={{ fontWeight: "bold", marginLeft: 5 }}>Transfer</Text>
           </Pressable>
         </TouchableOpacity>
+
         <TouchableOpacity>
           <Pressable style={styles.OvalButton}>
             <MaterialCommunityIcons name="file-document-outline" size={24} color="#008a00" />
             <Text style={{ fontWeight: "bold", marginLeft: 5 }}>Pay Bills</Text>
           </Pressable>
         </TouchableOpacity>
+
         <TouchableOpacity>
           <Pressable style={styles.OvalButton}>
             <MaterialCommunityIcons name="camera-outline" size={24} color="#008a00" />
             <Text style={{ fontWeight: "bold", marginLeft: 5 }}>Deposit Cheque</Text>
           </Pressable>
         </TouchableOpacity>
+
         <TouchableOpacity>
           <Pressable style={styles.OvalButton}>
             <SimpleLineIcons name="globe" size={24} color="#008a00" />
             <Text style={{ fontWeight: "bold", marginLeft: 5 }}>TD Global Transfer</Text>
           </Pressable>
         </TouchableOpacity>
+
         <TouchableOpacity>
           <Pressable style={[styles.OvalButton, { marginRight: 20 }]}>
             <MaterialCommunityIcons name="currency-usd" size={24} color="#008a00" />
             <Text style={{ fontWeight: "bold", marginLeft: 5 }}>Request Money</Text>
           </Pressable>
         </TouchableOpacity>
+
       </ScrollView>
 
       <View style={styles.myAccountContainer}>
+
         <View style={styles.myAccounts}>
           <Text style={{ fontWeight: "bold", fontSize: 24 }}>My Accounts</Text>
           <MaterialCommunityIcons name="chevron-right" size={40} color="#008a00" />
           <MaterialCommunityIcons style={{ marginLeft: "auto" }} name="dots-horizontal" size={24} color="black" />
         </View>
+
+        <View style={styles.BankTab}>
+          <TouchableOpacity>
+            <Pressable style={styles.BankTabTextContainer}>
+              <View>
+                <Text style={styles.BankTabText}>Banking</Text>
+                <Text style={{ color: "#7a7a7a" }}>5 accounts</Text>
+              </View>
+              <View style={{ marginLeft: "auto", marginRight: 10, flexDirection: "row", alignItems: "center" }}>
+                <Text style={{ fontWeight: "bold", marginRight: 5, fontSize: 18 }}>$25654.00</Text>
+                <MaterialCommunityIcons name="chevron-down" size={30} color="#797979" />
+              </View>
+            </Pressable>
+          </TouchableOpacity>
+        </View>
+
       </View>
+
       <View style={styles.NavBar}>
         <Text style={{ color: "white", fontWeight: "bold" }}>Navigation Bar</Text>
       </View>
@@ -125,15 +151,16 @@ const styles = StyleSheet.create({
     width: "100%",
     justifyContent: "space-between",
     alignItems: "center",
-    flexDirection: "row",
+    flexDirection: "column",
   },
 
   myAccounts: {
-    width: "100%",
+    width: "90%",
     justifyContent: "flex-start",
     alignItems: "center",
-    padding: 20,
     flexDirection: "row",
+    marginTop: 40,
+    marginBottom: 20,
   },
 
   NavBar: {
@@ -143,5 +170,31 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
 
-  }
+  },
+
+  BankTab: {
+    width: "90%",
+    height: "auto",
+    borderRadius: 15,
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingLeft: 15,
+    marginBottom: 10,
+  },
+
+  BankTabTextContainer: {
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    paddingVertical: 20,
+  },
+
+  BankTabText: {
+    fontWeight: "bold",
+    fontSize: 24,
+  },
+
+
 });
