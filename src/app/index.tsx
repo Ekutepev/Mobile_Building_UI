@@ -206,9 +206,9 @@ export default function Index() {
           </TouchableOpacity>
         </View>
 
-        <View>
+        <View style={styles.accountAndServicesTab}>
           <TouchableOpacity>
-            <Pressable>
+            <Pressable style={styles.accountAndServicesTabTextContainer}>
               <View>
                 <MaterialCommunityIcons
                   name="plus-circle-outline"
@@ -381,29 +381,29 @@ const styles = StyleSheet.create({
     fontSize: 19,
   },
 
-  // accountAndServicesTab: {
-  //   width: "90%",
-  //   height: "auto",
-  //   borderRadius: 15,
-  //   backgroundColor: "white",
-  //   justifyContent: "center",
-  //   alignItems: "flex-start",
-  //   marginBottom: 10,
-  // },
+  accountAndServicesTab: {
+    width: "90%",
+    height: "auto",
+    borderRadius: 15,
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    marginBottom: 10,
+  },
 
-  // accountAndServicesTabTextContainer: {
-  //   width: "90%",
-  //   justifyContent: "space-between",
-  //   alignItems: "center",
-  //   flexDirection: "row",
-  //   paddingVertical: 20,
-  //   marginLeft: 15,
-  // },
+  accountAndServicesTabTextContainer: {
+    width: "90%",
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexDirection: "row",
+    paddingVertical: 20,
+    marginLeft: 15,
+  },
 
-  // accountAndServicesTabText: {
-  //   fontWeight: "bold",
-  //   fontSize: 16,
-  // },
+  accountAndServicesTabText: {
+    fontWeight: "bold",
+    fontSize: 16,
+  },
 
   navBar: {
     width: "100%",
