@@ -33,7 +33,11 @@ export default function Index() {
       </View>
 
       <View>
-        <ScrollView horizontal={true} style={{ marginTop: -20, flexGrow: 0 }}>
+        <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          style={{ marginTop: -20, flexGrow: 0 }}
+        >
           <TouchableOpacity>
             <Pressable style={[styles.ovalButton, { marginLeft: 20 }]}>
               <MaterialCommunityIcons
