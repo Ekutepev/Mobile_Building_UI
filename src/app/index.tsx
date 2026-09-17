@@ -1,10 +1,11 @@
 import { FontAwesome6 } from "@expo/vector-icons";
-import AntDesign from '@expo/vector-icons/AntDesign';
+import AntDesign from "@expo/vector-icons/AntDesign";
 import Fontisto from "@expo/vector-icons/Fontisto";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
 import { useState } from "react";
 import {
+  Alert,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -49,7 +50,9 @@ export default function Index() {
           <TouchableOpacity>
             <Pressable style={styles.ovalButton}>
               <Fontisto name="arrow-swap" size={24} color="#008a00" />
-              <Text style={{ fontWeight: "bold", marginLeft: 5 }}>Transfer</Text>
+              <Text style={{ fontWeight: "bold", marginLeft: 5 }}>
+                Transfer
+              </Text>
             </Pressable>
           </TouchableOpacity>
 
@@ -60,7 +63,9 @@ export default function Index() {
                 size={24}
                 color="#008a00"
               />
-              <Text style={{ fontWeight: "bold", marginLeft: 5 }}>Pay Bills</Text>
+              <Text style={{ fontWeight: "bold", marginLeft: 5 }}>
+                Pay Bills
+              </Text>
             </Pressable>
           </TouchableOpacity>
 
@@ -102,7 +107,9 @@ export default function Index() {
 
         <View style={styles.myAccountContainer}>
           <View style={styles.myAccounts}>
-            <Text style={{ fontWeight: "bold", fontSize: 24 }}>My Accounts</Text>
+            <Text style={{ fontWeight: "bold", fontSize: 24 }}>
+              My Accounts
+            </Text>
             <MaterialCommunityIcons
               name="chevron-right"
               size={40}
@@ -205,7 +212,9 @@ export default function Index() {
                     alignItems: "center",
                   }}
                 >
-                  <Text style={{ fontWeight: "bold", fontSize: 18 }}>$0.00</Text>
+                  <Text style={{ fontWeight: "bold", fontSize: 18 }}>
+                    $0.00
+                  </Text>
                 </View>
               </Pressable>
             </TouchableOpacity>
@@ -222,7 +231,9 @@ export default function Index() {
                   />
                 </View>
                 <View>
-                  <Text style={styles.accountAndServicesTabText}>Add Accounts and Services</Text>
+                  <Text style={styles.accountAndServicesTabText}>
+                    Add Accounts and Services
+                  </Text>
                 </View>
               </Pressable>
             </TouchableOpacity>
@@ -230,41 +241,129 @@ export default function Index() {
         </View>
       </View>
       <View style={styles.navBar}>
-        <Pressable onPress={() => setSelectedTab("Home")} style={styles.navBarContainer}>
-          <View style={[styles.navBarIconAlignment,]} >
-            <MaterialCommunityIcons style={{ paddingBottom: 10 }} name="home" size={24} color={selectedTab === "Home" ? "#038204" : "#7a7a7a"} />
-            <Text style={{ ...styles.navBarText, fontWeight: selectedTab === "Home" ? "bold" : "normal" }}>Home</Text>
+        <Pressable
+          onPress={() => setSelectedTab("Home")}
+          style={styles.navBarContainer}
+        >
+          <View style={[styles.navBarIconAlignment]}>
+            <MaterialCommunityIcons
+              style={{ paddingBottom: 10 }}
+              name="home"
+              size={24}
+              color={selectedTab === "Home" ? "#038204" : "#7a7a7a"}
+            />
+            <Text
+              style={{
+                ...styles.navBarText,
+                fontWeight: selectedTab === "Home" ? "bold" : "normal",
+              }}
+            >
+              Home
+            </Text>
           </View>
         </Pressable>
-        <Pressable onPress={() => setSelectedTab("Accounts")} style={styles.navBarContainer}>
+        <Pressable
+          onPress={() => setSelectedTab("Accounts")}
+          style={styles.navBarContainer}
+        >
           <View style={styles.navBarIconAlignment}>
-            <MaterialCommunityIcons style={{ paddingBottom: 10 }} name="equal" size={24} color={selectedTab === "Accounts" ? "#038204" : "#7a7a7a"} />
-            <Text style={{ ...styles.navBarText, fontWeight: selectedTab === "Accounts" ? "bold" : "normal" }}>Accounts</Text>
+            <MaterialCommunityIcons
+              style={{ paddingBottom: 10 }}
+              name="equal"
+              size={24}
+              color={selectedTab === "Accounts" ? "#038204" : "#7a7a7a"}
+            />
+            <Text
+              style={{
+                ...styles.navBarText,
+                fontWeight: selectedTab === "Accounts" ? "bold" : "normal",
+              }}
+            >
+              Accounts
+            </Text>
           </View>
         </Pressable>
-        <Pressable onPress={() => setSelectedTab("Move Money")} style={styles.navBarContainer}>
+        <Pressable
+          onPress={() => {
+            setSelectedTab("Alert");
+            Alert.alert("Alert tab selected");
+          }}
+          style={styles.navBarContainer}
+        >
           <View style={styles.navBarIconAlignment}>
-            <View style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", paddingBottom: 10 }}>
-              <FontAwesome6 name="bars-staggered" size={12} color={selectedTab === "Move Money" ? "#038204" : "#7a7a7a"} />
-              <AntDesign name="dollar-circle" size={24} color={selectedTab === "Move Money" ? "#038204" : "#7a7a7a"} />
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+                paddingBottom: 10,
+              }}
+            >
+              <FontAwesome6
+                name="bars-staggered"
+                size={12}
+                color={selectedTab === "Alert" ? "#038204" : "#7a7a7a"}
+              />
+              <AntDesign
+                name="dollar-circle"
+                size={24}
+                color={selectedTab === "Alert" ? "#038204" : "#7a7a7a"}
+              />
             </View>
-            <Text style={{ ...styles.navBarText, fontWeight: selectedTab === "Move Money" ? "bold" : "normal" }}>Move Money</Text>
+            <Text
+              style={{
+                ...styles.navBarText,
+                fontWeight: selectedTab === "Alert" ? "bold" : "normal",
+              }}
+            >
+              Alert
+            </Text>
           </View>
         </Pressable>
-        <Pressable onPress={() => setSelectedTab("Rewards")} style={styles.navBarContainer}>
+        <Pressable
+          onPress={() => setSelectedTab("Rewards")}
+          style={styles.navBarContainer}
+        >
           <View style={styles.navBarIconAlignment}>
-            <MaterialCommunityIcons style={{ paddingBottom: 10 }} name="wallet-giftcard" size={24} color={selectedTab === "Rewards" ? "#038204" : "#7a7a7a"} />
-            <Text style={{ ...styles.navBarText, fontWeight: selectedTab === "Rewards" ? "bold" : "normal" }}>Rewards</Text>
+            <MaterialCommunityIcons
+              style={{ paddingBottom: 10 }}
+              name="wallet-giftcard"
+              size={24}
+              color={selectedTab === "Rewards" ? "#038204" : "#7a7a7a"}
+            />
+            <Text
+              style={{
+                ...styles.navBarText,
+                fontWeight: selectedTab === "Rewards" ? "bold" : "normal",
+              }}
+            >
+              Rewards
+            </Text>
           </View>
         </Pressable>
-        <Pressable onPress={() => setSelectedTab("More")} style={styles.navBarContainer}>
-          <View style={[styles.navBarIconAlignment,]}>
-            <MaterialCommunityIcons style={{ paddingBottom: 10 }} name="menu" size={24} color={selectedTab === "More" ? "#038204" : "#7a7a7a"} />
-            <Text style={{ ...styles.navBarText, fontWeight: selectedTab === "More" ? "bold" : "normal" }}>More</Text>
+        <Pressable
+          onPress={() => setSelectedTab("More")}
+          style={styles.navBarContainer}
+        >
+          <View style={[styles.navBarIconAlignment]}>
+            <MaterialCommunityIcons
+              style={{ paddingBottom: 10 }}
+              name="menu"
+              size={24}
+              color={selectedTab === "More" ? "#038204" : "#7a7a7a"}
+            />
+            <Text
+              style={{
+                ...styles.navBarText,
+                fontWeight: selectedTab === "More" ? "bold" : "normal",
+              }}
+            >
+              More
+            </Text>
           </View>
         </Pressable>
-      </View >
-    </View >
+      </View>
+    </View>
   );
 }
 
